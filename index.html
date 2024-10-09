@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="tailwind.config.js">
+    
+    <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <title>Weather App</title>
+</head>
+<body class="bg-gray-100">
+
+   
+    <div class="flex justify-center items-center h-screen">
+        <div id="weatherForm" class="p-8 rounded-lg shadow-lg max-w-lg w-full bg-gray-800 text-white">
+            <h2 class="text-2xl font-bold mb-4 text-center">Weather Information</h2>
+            
+           
+            <form id="form"> 
+               
+                <div class="mb-6">
+                    <label for="city" class="block text-lg mb-2">Enter City Name</label>
+                    <input 
+                        type="text" 
+                        id="city" 
+                        class="w-full p-3 border-none rounded-md text-black focus:ring-4 focus:ring-yellow-300 focus:outline-none"
+                        placeholder="e.g., New York" 
+                        required>
+                </div>
+                
+               
+                <div class="mb-6">
+                    <label for="temperature" class="block text-lg mb-2">Temperature (°C)</label>
+                    <input 
+                        type="number" 
+                        id="temperature" 
+                        class="w-full p-3 border-none rounded-md text-black focus:ring-4 focus:ring-yellow-300 focus:outline-none"
+                        placeholder="Enter temperature in °C" 
+                        required>
+                </div>
+                
+                
+                <div class="mb-6">
+                    <label for="condition" class="block text-lg mb-2">Weather Condition</label>
+                    <select 
+                        id="condition" 
+                        class="w-full p-3 border-none rounded-md text-black focus:ring-4 focus:ring-yellow-300 focus:outline-none">
+                        <option value="Sunny">Sunny</option>
+                        <option value="Cloudy">Cloudy</option>
+                        <option value="Rainy">Rainy</option>
+                        <option value="Snowy">Snowy</option>
+                    </select>
+                </div>
+                
+                
+                <button type="submit" id="submitBtn" class="w-full p-3 rounded-md text-lg bg-green-500 hover:bg-green-400 font-semibold">Get Weather</button>
+                
+            
+                <p id="message" class="text-center p-3 mt-4 rounded-md"></p>
+            </form> 
+        </div>
+    </div>
+
+    <script src="script.js"></script> 
+</body>
+</html>
